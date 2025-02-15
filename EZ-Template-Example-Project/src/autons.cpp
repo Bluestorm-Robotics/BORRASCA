@@ -40,12 +40,14 @@ void auton_skills(){
   //move to mogo position x
   chassis.pid_wait();
   chassis.pid_turn_set(90_deg, TURN_SPEED);
-  
+  //turn back to mogo
   chassis.pid_wait();
-  chassis.pid_drive_set(-5.54_in, 127);
+  chassis.pid_drive_set(-5.57_in, 127);
+  //move to mogo
   chassis.pid_wait();
   pistion_set();
   chassis.pid_drive_set(-4.2_in, 127);
+  //move to 1st ring x position
   chassis.pid_wait();
   chassis.pid_turn_set(0_deg, TURN_SPEED);
   chassis.pid_wait();
