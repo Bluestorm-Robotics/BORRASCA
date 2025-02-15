@@ -37,8 +37,10 @@ void auton_skills(){
   pros::delay(2000);
   pistion_set();
   chassis.pid_drive_set(5.9_in, 127);
+  //move to mogo position x
   chassis.pid_wait();
   chassis.pid_turn_set(90_deg, TURN_SPEED);
+  
   chassis.pid_wait();
   chassis.pid_drive_set(-5.54_in, 127);
   chassis.pid_wait();
